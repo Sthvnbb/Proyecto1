@@ -1,4 +1,5 @@
 <resources>
+<<<<<<< Updated upstream
     <string name="app_name">Teléfono</string>
 
     <string name="nombre1">Gabriel</string>
@@ -10,5 +11,23 @@
     <string name="numero3">83851046</string>
 
     <string name="desconocido">Número Desconocido</string>
+=======
+    <string name="app_name">ProyectoLlamadas</string>
+    <string name="title">Telefono</string>
+
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+
+    <string name="star">*</string>
+    <string name="hashtag">#</string>
+>>>>>>> Stashed changes
 
 </resources>
