@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ProyectoLlamadas</string>
+
+    <string name="nombre1">Gabriel</string>
+    <string name="nombre2">Carolina</string>
+    <string name="nombre3">David</string>
+
+    <string name="numero1">87516484</string>
+    <string name="numero2">88631158</string>
+    <string name="numero3">83851046</string>
+
+    <string name="desconocido">Número Desconocido</string>
+
 </resources>
