@@ -1,7 +1,4 @@
 <resources>
-<<<<<<< Updated upstream
-    <string name="app_name">Teléfono</string>
-
     <string name="nombre1">Gabriel</string>
     <string name="nombre2">Carolina</string>
     <string name="nombre3">David</string>
