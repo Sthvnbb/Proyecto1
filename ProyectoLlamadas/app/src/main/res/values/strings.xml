@@ -1,4 +1,7 @@
 <resources>
+
+    <string name="app_name">ProyectoLlamadas</string>
+
     <string name="nombre1">Gabriel</string>
     <string name="nombre2">Carolina</string>
     <string name="nombre3">David</string>
@@ -25,6 +28,5 @@
 
     <string name="star">*</string>
     <string name="hashtag">#</string>
->>>>>>> Stashed changes
 
 </resources>
