@@ -14,6 +14,7 @@ public class ContactsInfo extends Activity{
     Intent intentMain;
     Contacts contacts;
     TextView name, phone;
+    MainActivity m;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,10 +25,26 @@ public class ContactsInfo extends Activity{
         intentMain = getIntent();
         contacts = (Contacts)intentMain.getSerializableExtra("Contacts");
 
-        name = (TextView)findViewById(R.id.name_field);
-        name.setText(name.getText() + contacts.Nombre1());
 
+        name = (TextView)findViewById(R.id.name_field);
         phone = (TextView)findViewById(R.id.number_field);
-        phone.setText(phone.getText() + contacts.Numero1());
+
+        if (m.cnt == 1) {
+
+            name.setText(name.getText() + contacts.Nombre1());
+            phone.setText(phone.getText() + contacts.Numero1());
+        }
+
+        if (m.cnt == 2) {
+
+            name.setText(name.getText() + contacts.Nombre1());
+            phone.setText(phone.getText() + contacts.Numero1());
+        }
+
+        if (m.cnt == 3) {
+
+            name.setText(name.getText() + contacts.Nombre1());
+            phone.setText(phone.getText() + contacts.Numero1());
+        }
     }
 }

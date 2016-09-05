@@ -1,6 +1,7 @@
 package com.example.centauro.proyectollamadas;
 
 import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Intent intentContacts;
     Contacts contacts;
+    ContactsInfo c;
 
     Button b_zero, b_one, b_two, b_three, b_four, b_five, b_six, b_seven, b_eight, b_nine, b_call, b_star, b_hashtag;
     TextView screen;
@@ -23,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         contacts = new Contacts();
+        c = new ContactsInfo();
 
         b_zero = (Button) findViewById(R.id.button_zero);
         b_one = (Button) findViewById(R.id.button_one);
@@ -143,16 +146,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                number = screen.getText().toString();
+                try {
+                    number = screen.getText().toString();
 
-                if (NumberOK(number, contacts)){
+                    if (NumberOK(number, contacts)) {
 
-                    intentContacts= new Intent(getApplicationContext(), Contacts.class);
-                    intentContacts.putExtra("Contacts", contacts);
-                    startActivity(intentContacts);
-                    finish();
+                        intentContacts = new Intent(getApplicationContext(), Contacts.class);
+                        intentContacts.putExtra("Contacts", (Parcelable) contacts);
+                        startActivity(intentContacts);
+                        finish();
 
-                }
+                    } else {
+                        c.name.setText(getText(R.string.desconocido));
+                        c.phone.setText(number);
+                    }
+                }catch(Exception exc){}
             }
         });
     }
