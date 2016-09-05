@@ -13,8 +13,10 @@ public class ContactsInfo extends Activity{
 
     Intent intentMain;
     Contacts contacts;
+    Integer cont;
+    String num;
     TextView name, phone;
-    MainActivity m;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,33 +26,39 @@ public class ContactsInfo extends Activity{
 
         intentMain = getIntent();
         contacts = (Contacts)intentMain.getSerializableExtra("ContactsInfo");
+        cont = (Integer) intentMain.getSerializableExtra("contador");
+        num = (String) intentMain.getSerializableExtra("numero");
 
 
         name = (TextView)findViewById(R.id.name_field);
         phone = (TextView)findViewById(R.id.number_field);
 
-        if (m.cnt == 1) {
+        if (cont == 1) {
 
             name.setText(contacts.Nombre1());
             phone.setText(contacts.Numero1());
+
         }
 
-        if (m.cnt == 2) {
+        if (cont == 2) {
 
             name.setText(contacts.Nombre2());
             phone.setText(contacts.Numero2());
+
         }
 
-        if (m.cnt == 3) {
+        if (cont == 3) {
 
             name.setText(contacts.Nombre3());
             phone.setText(contacts.Numero3());
+
         }
 
-        else {
+        if (cont == 4) {
 
             name.setText(R.string.desconocido);
-            phone.setText(m.number);
+            phone.setText(num);
         }
+
     }
 }

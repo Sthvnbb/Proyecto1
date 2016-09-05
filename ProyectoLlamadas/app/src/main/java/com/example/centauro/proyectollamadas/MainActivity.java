@@ -161,6 +161,8 @@ public class MainActivity extends AppCompatActivity {
 
                         intentContactsInfo = new Intent(getApplicationContext(), ContactsInfo.class);
                         intentContactsInfo.putExtra("ContactsInfo", contacts);
+                        intentContactsInfo.putExtra("contador", cnt);
+                        intentContactsInfo.putExtra("numero", number);
                         startActivity(intentContactsInfo);
                         finish();
 
@@ -168,9 +170,11 @@ public class MainActivity extends AppCompatActivity {
 
                     else {
 
-
                     }
-                }catch (Exception exc){}
+
+                }catch (Exception exc){
+                    exc.getMessage();
+                }
             }
         });
     }
@@ -197,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
         else{
 
-            cnt = 0;
+            cnt = 4;
             return true;
         }
 

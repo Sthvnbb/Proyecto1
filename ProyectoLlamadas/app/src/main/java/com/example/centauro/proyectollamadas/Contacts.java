@@ -4,13 +4,13 @@ import java.io.Serializable;
 
 public class Contacts implements Serializable {
 
-        private String nombre1 = "Gabriel";
+        private String nombre1 = "Gabriel ";
         private String nombre2 = "Carolina";
         private String nombre3 = "David";
 
-        private String numero1 = "87516484";
-        private String numero2 = "88631158";
-        private String numero3 = "83851046";
+        private String numero1 = "84532386";
+        private String numero2 = "89323235";
+        private String numero3 = "80974134";
 
     public String Nombre1() {
 
