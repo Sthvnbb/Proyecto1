@@ -1,7 +1,5 @@
 <resources>
 
-    <string name="app_name">ProyectoLlamadas</string>
-
     <string name="nombre1">Gabriel</string>
     <string name="nombre2">Carolina</string>
     <string name="nombre3">David</string>
@@ -11,7 +9,7 @@
     <string name="numero3">83851046</string>
 
     <string name="desconocido">Número Desconocido</string>
-=======
+
     <string name="app_name">ProyectoLlamadas</string>
     <string name="title">Telefono</string>
 
