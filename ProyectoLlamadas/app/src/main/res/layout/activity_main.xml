@@ -23,12 +23,12 @@ android:layout_height="wrap_content">
     android:orientation="horizontal"
     android:layout_height="match_parent">
 
-
         <TextView
             android:id="@+id/screen"
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:layout_marginTop="20dp"
+            android:text="2345"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="35dp"
@@ -37,6 +37,7 @@ android:layout_height="wrap_content">
             android:textAlignment="viewEnd"
             android:background="@color/colorAccent"
             android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+
 
 
     </LinearLayout>
