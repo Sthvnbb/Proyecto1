@@ -37,14 +37,14 @@ public class ContactsInfo extends Activity{
 
         if (m.cnt == 2) {
 
-            name.setText(name.getText() + contacts.Nombre1());
-            phone.setText(phone.getText() + contacts.Numero1());
+            name.setText(name.getText() + contacts.Nombre2());
+            phone.setText(phone.getText() + contacts.Numero2());
         }
 
         if (m.cnt == 3) {
 
-            name.setText(name.getText() + contacts.Nombre1());
-            phone.setText(phone.getText() + contacts.Numero1());
+            name.setText(name.getText() + contacts.Nombre3());
+            phone.setText(phone.getText() + contacts.Numero3());
         }
     }
 }
