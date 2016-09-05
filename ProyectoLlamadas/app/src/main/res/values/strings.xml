@@ -1,17 +1,13 @@
 <resources>
 
-    <string name="nombre1">Gabriel</string>
-    <string name="nombre2">Carolina</string>
-    <string name="nombre3">David</string>
-
-    <string name="numero1">87516484</string>
-    <string name="numero2">88631158</string>
-    <string name="numero3">83851046</string>
 
     <string name="desconocido">Número Desconocido</string>
 
     <string name="app_name">ProyectoLlamadas</string>
     <string name="title">Telefono</string>
+
+    <string name="call">Call</string>
+    <string name="title2">Contact</string>
 
     <string name="zero">0</string>
     <string name="one">1</string>
@@ -26,5 +22,6 @@
 
     <string name="star">*</string>
     <string name="hashtag">#</string>
+    <string name="delete">Delete</string>
 
 </resources>

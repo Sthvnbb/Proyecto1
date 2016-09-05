@@ -28,15 +28,13 @@ android:layout_height="wrap_content">
             android:layout_width="match_parent"
             android:gravity="center_horizontal"
             android:layout_marginTop="20dp"
-            android:text="2345"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginBottom="35dp"
             android:layout_height="50dp"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:textAlignment="viewEnd"
-            android:background="@color/colorAccent"
-            android:textColor="@color/abc_background_cache_hint_selector_material_light" />
+            android:background="@color/colorAccent" />
 
 
 
@@ -170,9 +168,16 @@ android:layout_height="wrap_content">
                         android:gravity="center_horizontal"
                         android:layout_height="match_parent">
 
-                        <ImageButton
+                        <Button
                             android:id="@+id/button_call"
-                            android:background="@drawable/phone"
+                            android:text="@string/call"
+                            android:layout_marginRight="75dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <Button
+                            android:id="@+id/button_delete"
+                            android:text="@string/delete"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
 

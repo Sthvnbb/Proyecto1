@@ -1,8 +1,8 @@
 package com.example.centauro.proyectollamadas;
 
-import android.app.Activity;
+import java.io.Serializable;
 
-public class Contacts extends Activity {
+public class Contacts implements Serializable {
 
         private String nombre1 = "Gabriel";
         private String nombre2 = "Carolina";

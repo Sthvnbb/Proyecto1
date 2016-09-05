@@ -23,7 +23,7 @@ public class ContactsInfo extends Activity{
         setContentView(R.layout.activity_contacts);
 
         intentMain = getIntent();
-        contacts = (Contacts)intentMain.getSerializableExtra("Contacts");
+        contacts = (Contacts)intentMain.getSerializableExtra("ContactsInfo");
 
 
         name = (TextView)findViewById(R.id.name_field);
@@ -31,20 +31,26 @@ public class ContactsInfo extends Activity{
 
         if (m.cnt == 1) {
 
-            name.setText(name.getText() + contacts.Nombre1());
-            phone.setText(phone.getText() + contacts.Numero1());
+            name.setText(contacts.Nombre1());
+            phone.setText(contacts.Numero1());
         }
 
         if (m.cnt == 2) {
 
-            name.setText(name.getText() + contacts.Nombre2());
-            phone.setText(phone.getText() + contacts.Numero2());
+            name.setText(contacts.Nombre2());
+            phone.setText(contacts.Numero2());
         }
 
         if (m.cnt == 3) {
 
-            name.setText(name.getText() + contacts.Nombre3());
-            phone.setText(phone.getText() + contacts.Numero3());
+            name.setText(contacts.Nombre3());
+            phone.setText(contacts.Numero3());
+        }
+
+        else {
+
+            name.setText(R.string.desconocido);
+            phone.setText(m.number);
         }
     }
 }

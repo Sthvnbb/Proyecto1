@@ -10,14 +10,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Intent intentContacts;
+    Intent intentContactsInfo;
     Contacts contacts;
     ContactsInfo c;
 
-    Button b_zero, b_one, b_two, b_three, b_four, b_five, b_six, b_seven, b_eight, b_nine, b_call, b_star, b_hashtag;
+    Button b_zero, b_one, b_two, b_three, b_four, b_five, b_six, b_seven, b_eight, b_nine, b_star, b_hashtag, b_delete, b_call;
     TextView screen;
     String number;
-    int cnt;
+    int cnt = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,9 +38,10 @@ public class MainActivity extends AppCompatActivity {
         b_eight = (Button) findViewById(R.id.button_eight);
         b_nine = (Button) findViewById(R.id.button_nine);
 
-        b_call = (Button) findViewById(R.id.button_zero);
-        b_star = (Button) findViewById(R.id.button_zero);
-        b_hashtag = (Button) findViewById(R.id.button_zero);
+        b_call = (Button) findViewById(R.id.button_call);
+        b_star = (Button) findViewById(R.id.button_star);
+        b_hashtag = (Button) findViewById(R.id.button_hashtag);
+        b_delete = (Button) findViewById(R.id.button_delete);
 
         screen = (TextView) findViewById(R.id.screen);
 
@@ -141,26 +142,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        b_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                screen.setText("");
+            }
+        });
 
         b_call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
+                number = screen.getText().toString();
+
                 try {
-                    number = screen.getText().toString();
 
                     if (NumberOK(number, contacts)) {
 
-                        intentContacts = new Intent(getApplicationContext(), Contacts.class);
-                        intentContacts.putExtra("Contacts", (Parcelable) contacts);
-                        startActivity(intentContacts);
+                        intentContactsInfo = new Intent(getApplicationContext(), ContactsInfo.class);
+                        intentContactsInfo.putExtra("ContactsInfo", contacts);
+                        startActivity(intentContactsInfo);
                         finish();
 
-                    } else {
-                        c.name.setText(getText(R.string.desconocido));
-                        c.phone.setText(number);
                     }
-                }catch(Exception exc){}
+
+                    else {
+
+
+                    }
+                }catch (Exception exc){}
             }
         });
     }
@@ -185,10 +195,10 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-        else
-        {
+        else{
+
             cnt = 0;
-            return false;
+            return true;
         }
 
     }
